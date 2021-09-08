@@ -1,6 +1,6 @@
 ---
 - name: Instalación Apache
-  hosts: WebServers
+  hosts: Masterclass
   become: yes
   tasks:
 
