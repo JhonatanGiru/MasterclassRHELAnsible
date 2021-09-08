@@ -12,4 +12,4 @@
     - name: Reiniciar servicio de Apache
       service:
         name: httpd
-        status: restarted 
+        state: restarted 
