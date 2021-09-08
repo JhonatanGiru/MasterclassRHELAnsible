@@ -1,0 +1,10 @@
+---
+- name: Desinstalación Apache
+  hosts: WebServers
+  become: yes
+  tasks:
+
+  - name: Desinstalar Apache
+    yum:
+      name: httpd
+      state: absent
