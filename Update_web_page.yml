@@ -1,6 +1,6 @@
 ---
 - name: Actualizar página web
-  hosts: Masterclass
+  hosts: WebServers
   become: yes
   tasks:
 
