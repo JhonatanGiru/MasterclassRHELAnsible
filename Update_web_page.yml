@@ -1,6 +1,6 @@
 ---
 - name: Actualizar página web
-  hosts: MasterclassRHEL
+  hosts: Masterclass
   become: yes
   tasks:
 
