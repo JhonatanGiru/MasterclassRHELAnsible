@@ -7,7 +7,7 @@
     - name: Copiar la página web personalizada
       copy: 
         src: pagina.html
-        dest: /var/lib/www/html/index.html
+        dest: /var/www/html/index.html
 
     - name: Reiniciar servicio de Apache
       service:
