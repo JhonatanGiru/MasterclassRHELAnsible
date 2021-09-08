@@ -1,0 +1,15 @@
+---
+- name: Actualizar página web
+  hosts: MasterclassRHEL
+  become: yes
+  tasks:
+
+    - name: Copiar la página web personalizada
+      copy: 
+        src: pagina.html
+        dest: /var/lib/www/html/index.html
+
+    - name: Reiniciar servicio de Apache
+      service:
+        name: httpd
+        status: restarted 
