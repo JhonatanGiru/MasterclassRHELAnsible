@@ -1,0 +1,13 @@
+#Because the managed host would not have SSH key-based authentication configured yet, you would have to run the playbook using the ansible-playbook command with the --ask-pass option in order for the command to authenticate as the remote user.
+
+- name: Public key is deployed to managed hosts for Ansible
+  hosts: all
+
+  tasks:
+    - name: Ensure key is in root's ~/.ssh/authorized_hosts
+      authorized_key:
+        user: root
+        state: present
+        key: '{{ item }}'
+      with_file:
+        - ~/.ssh/id_rsa.pub
